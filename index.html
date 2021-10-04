@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Online Web Calculator">
+        <meta name="description" content="Calculator">
+        <meta name="description" content="Simple Calculator">
+         <meta name="keywords" content="online calculator,calculator,"> 
+         <meta name="keywords" content="addition Calculator,substraction calculator">
+         <meta name="keywords" content="Multiplication Calculator,Division Calculator,Modulus Calculator">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="icon" href="https://cdn.jim-nielsen.com/ios/512/calculator-2017-10-10.png" />
+
+
+
+   
+
+
+</head>
+<body>
+        <header>
+        <div class="bg-info p-2 text-white">
+  <h1 class="wrapper ml-5">Calculator</h1>
+</div>
+</header>
+<section class="mt-3 p-0">
+        <div class="container">
+                <div class="row">
+                        <div class="col-auto col-sm-auto col-md-auto col-lg-auto col-xl-auto">
+                                <div class="calc-body">
+                                 
+                                 <div id="inpt-frm">
+                                 <input type="text" id="screen">
+                                  </div>
+                                 <div class="buttons">
+                                          <button id="bt" style="background:honeydew;color: black;" onclick="clearac();">AC</button>
+                                          <button id="bt" style="background:honeydew;color: black;" onclick="getPlus('+/-')">+/-</button>
+                                          <button id="bt" style="background:honeydew;color: black;" onclick="getOp('%');">%</button>
+                                          <button id="bto" style="background:orange;color: white;" onclick="getOp('/');">÷</button>
+                                          <button id="bt" onclick="getValue(7);">7</button>
+                                          <button id="bt" onclick="getValue(8);" >8</button>
+                                          <button id="bt" onclick="getValue(9);">9</button>
+                                          <button id="bto" style="background:orange;color: white;" onclick="getOp('*');">x</button>
+                                          <button id="bt" onclick="getValue(4);">4</button>
+                                          <button id="bt" onclick="getValue(5);">5</button>
+                                          <button id="bt" onclick="getValue(6);">6</button>
+                                          <button id="bto" style="background:orange;color: white;" onclick="getOp('-');">-</button>
+                                          <button id="bt" onclick="getValue(1);">1</button>
+                                          <button id="bt" onclick="getValue(2);">2</button>
+                                          <button id="bt"onclick="getValue(3);" >3</button>
+                                          <button id="bto" style="background:orange;color: white;" onclick="getOp('+');">+</button>
+                                          <button id="bt" style="width:8em;height:3em;border-radius: 15%;"onclick="getValue(0);" >0</button>
+                                          <button id="bt" onclick="getValue('.');">.</button>
+                                          <button id="bto" style="background:orange;color: white" onclick="equalClick();">=</button>
+                                  </div>
+                                </div>
+                        </div>
+                
+                </div>
+        </div>
+
+    </section>  
+    <section class="mt-3 bg-light">
+            
+            
+            
+            <div class="container">
+                    <div class="row mt-3">
+                            <div class="col-md-12">
+                                <h4 class= "foot-wrapper p-1" style="font-family: sans-serif;">Feel free to ask your queries or any suggestions..</h4>
+                                    <div class="main-footer">
+                                            <div class="footone">
+                                                    <!-- main-email-->
+                                                    <form id="submit-form" action="">
+                                                                                         
+                                                        <div class="form-row">
+                                                          <div class="form-group col-md-6">     
+                                                            <label for="inputEmail4">Name</label>
+                                                            <input type="text" name="Name" class="form-control"id="inputEmail4" placeholder="Name">
+                                                          </div>
+                                                          <div class="form-group col-md-6">
+                                                                <label for="inputEmail4">Email</label>
+                                                                <input type="email" name="Email" class="form-control" id="inputEmail4" placeholder="Email">
+                                                              </div>
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                          <label for="inputAddress">Comments</label>
+                                                          <textarea name="Comments" id="nul" class="form-control" cols="30" rows="10" placeholder="Type your comments Here" style="resize: none;"></textarea>
+                
+                                                        </div>
+                                                        
+                                                           
+                                                          
+                                                        <div class="form-group text-center">
+                                                        <button  type="submit"id="sub" class="btn btn-primary"style="width: 100%;">Submit</button>
+                                                      </div>
+                                                </form>
+                                                      
+                                            </div>
+                                            <div class="foottwo">
+                                               <h5 class="p-1"style="font-family: sans-serif;">Connect me on, </h5>   
+                                                <li class="liicons"><a href="https://instagram.com/dev.visalraj?utm_medium=copy_link"><i class="fa fa-instagram"></i></a></li><br>
+                        
+                                                <li class='liicons'><a href="https://twitter.com/imVisalraj"><i class="fa fa-twitter"></i></a></li>
+
+                                                    <!--ins-->
+                                                   
+                                            </div>
+                                    </div>
+
+
+                            </div>
+
+                    </div>
+            </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+           $("#sub").click(function(){
+                   var name=$("#inputEmail4").val();
+                   var email=$("#inputEmail4").val();
+                   var comments=$("#nul").val();
+                   if(name ==''|| email =='' || comments==''){
+                        swal({
+                       title: "Fields Empty!",
+                       text: "Please check the missing fields..",
+                        icon: "warning",
+                        button: "ok",
+                         });
+                   }else
+                   {
+                        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycby_8_UOdHnboAVziNz1wOktmCnortWNRY_vGUk3fZ3GEYQUcE4/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success: function (response){
+                       
+                        setTimeout(() => swal({
+                  title: "Good job!",
+                  text: "Your Comments Received!  Developer will reach you soon..",
+                  icon: "success",
+                   button: "Ok",
+                   }),5000);
+                    
+                },
+                error:function (err){
+                        swal({
+                  title: "ohoho!",
+                  text: "Something error occured..",
+                  icon: "info",
+                   button: "Ok",
+                   });
+                    
+    
+                }
+            })
+        })
+                   }
+           })
+    </script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+     <script src="calculator.js"></script>
+     
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+     
+
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+
+     <script src="cv.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+

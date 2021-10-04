@@ -1,0 +1,60 @@
+.wrapper{
+        font-family: sans-serif;    
+}
+.calc-body{
+        float: left;
+        width:18.3em;
+        height:23em;
+        background:black;
+}
+#screen{
+        pointer-events: none;
+        margin-top: 0.9em;
+        margin-left:1.5em;
+        width:15em;
+        height:2.5em;
+        direction: ltr;
+        font-family: sans-serif;
+        font-weight: bolder;
+        resize: none;
+}
+.buttons{
+        margin-top: 1.2em;
+}
+#bt{
+        border-radius: 37%;
+        margin-top: 0.5em;
+        margin-left: 0.69em;
+        width:3.5em;
+        height:3em;
+        border: none;
+        background:grey;
+        color: white;
+        font-weight:bolder;
+        font-family:sans-serif;
+        outline: none;
+}
+#bto{
+        border-radius: 37%;
+        margin-top: 0.5em;
+        margin-left: 0.69em;
+        width:3.5em;
+        height:3em;
+        border: none;
+        font-weight:bolder;
+        font-family:sans-serif;
+        outline: none;
+}
+
+.footone{
+        float: left;
+        width:90%;
+        height:50%;
+}
+      
+.foottwo{
+        float: left;
+        width:50%;
+        height:50%;
+}       
+       
